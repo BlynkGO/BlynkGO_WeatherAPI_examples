@@ -129,7 +129,7 @@ WIFI_CONNECTED(){
               http_get_weather_icon(weather_icon_url);
 
               //-----------------------------------------------------------------
-              // คำค่า weather ด้านบนที่ดึงมาได้จาก WeatherAPI ค่าต่างๆ นำไปใส่วิตเจ็ตที่ต้องการ
+              // นำค่า weather ด้านบนที่ดึงมาได้จาก WeatherAPI ค่าต่างๆ นำไปใส่วิตเจ็ตที่ต้องการ
 
               icon_weather.text( StringX::printf("อุณฯ %.1f C", temp_c ) );
               lb_last_updated = String("updated : ") + last_updated;
