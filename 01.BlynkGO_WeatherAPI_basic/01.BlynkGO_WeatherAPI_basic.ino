@@ -3,12 +3,12 @@
  * request ได้ 1 ล้านครั้งต่อวัน (แบบฟรี)
  * *******************************************************/
 
-#include <BlynkGOv3.h>
+#include <BlynkGOv2.h>
 #include <ArduinoJson.h>  // version 6.x
 #include <SPIFFS.h>
 #include "src/BlynkGO_AsyncHttpClient.h"
 
-#define WEATHERAPI_KEY    "--------------------------"
+#define WEATHERAPI_KEY    "-------------------------------"
 #define GPS_LAT           13.7516435
 #define GPS_LONG          100.4927041
 #define WEATHER_INTERVAL  10000        // ทุกๆ 10 วินาที
