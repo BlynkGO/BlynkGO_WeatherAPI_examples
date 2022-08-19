@@ -8,7 +8,7 @@
 #include <SPIFFS.h>
 #include "src/BlynkGO_AsyncHttpClient.h"
 
-#define WEATHERAPI_KEY    "a4169d4a5ad445f8a0f105015221707"
+#define WEATHERAPI_KEY    "--------------------------"
 #define GPS_LAT           13.7516435
 #define GPS_LONG          100.4927041
 #define WEATHER_INTERVAL  10000        // ทุกๆ 10 วินาที
@@ -128,9 +128,13 @@ WIFI_CONNECTED(){
               weather_icon_url = "http:"+weather_icon_url;
               http_get_weather_icon(weather_icon_url);
 
+              //-----------------------------------------------------------------
               // คำค่า weather ด้านบนที่ดึงมาได้จาก WeatherAPI ค่าต่างๆ นำไปใส่วิตเจ็ตที่ต้องการ
+
               icon_weather.text( StringX::printf("อุณฯ %.1f C", temp_c ) );
               lb_last_updated = String("updated : ") + last_updated;
+
+              // เปลี่ยน ค่า ระดับ US AQI ไปเป็นตำแหน่งกราฟิก บอกระดับสี US AQI
               cir_us_aqi_indic.hidden(false);
               cir_us_aqi_indic.align(rect_us_aqi[aqi_us_epa_index-1] ,ALIGN_TOP,0,-3);
 
